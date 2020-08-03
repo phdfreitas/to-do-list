@@ -1,0 +1,48 @@
+header{
+	background-color: #DC3545;
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+.new-task{
+	text-align: center;
+	margin-bottom: 12px;
+	padding-bottom: 16px;
+}
+
+.new-task h4{
+	font-family: 'Rowdies', cursive;
+	width: 100%;
+	font-size: 36px;
+	margin-bottom: 16px;
+}
+
+.new-task form{
+	width: 400px;
+	margin: 0 auto;
+}
+
+.new-task-input{
+	text-align: center;
+	font-family: 'Rowdies', cursive;
+	font-size: 17px;
+}
+
+.new-task-btn{
+	width: 75px;
+	font-family: 'Rowdies', cursive;
+	text-transform: uppercase;
+	text-align: center;
+	margin-left: 3px;
+}
+
+.pomodoro-tasks{
+	text-align: center;
+}
+
+.pomodoro-tasks h4{
+	font-family: 'Rowdies', cursive;
+	font-size: 36px;
+}

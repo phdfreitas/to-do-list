@@ -11,6 +11,9 @@
     <!-- Fontes --> 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
@@ -36,14 +39,57 @@
 			<div class="col-sm-6" style="border-right: 1px solid black;">
 				<h4>Pomodoro Clock</h4>
 				<hr>
+
+				<div id="clock">
+					<span class="material-icons">keyboard_arrow_up</span>
+					<span class="material-icons">keyboard_arrow_down</span>
+					<span id="minutes">
+						25
+					</span>
+					
+					<span>:</span>
+					
+					<span id="seconds">
+						00
+					</span>
+					
+					<span class="material-icons">keyboard_arrow_up</span>
+					<span class="material-icons">keyboard_arrow_down</span>
+				</div>
+
+				<div>
+					<span class="material-icons button">
+						play_arrow
+					</span>
+	 
+					<span class="material-icons button">
+						pause
+					</span>
+				</div>
+
+
 			</div>
 
 			<div class="col-sm-6">
 				<h4>All your tasks</h4>
 				<hr>
+				<div id="tasks">
+					<input type="checkbox" name="to-do" checked=""> Terminar o projeto to do list
+					<br>
+					<input type="checkbox" name="to-do"> Ganhar na mega-sena da virada
+					<br>
+					<input type="checkbox" name="to-do" checked=""> Ganhar na mega-sena da virada 2
+					<br>
+					<input type="checkbox" name="to-do"> Ganhar na mega-sena da virada
+				</div>
 			</div>
 		</div>
 	</div>
+
+
+
+	<script src="../js/clock.js"></script>
+	<script src="../js/tasks.js"></script>
 
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

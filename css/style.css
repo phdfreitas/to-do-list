@@ -6,6 +6,8 @@ header{
 	margin: 0;
 }
 
+/* Input style */
+
 .new-task{
 	text-align: center;
 	margin-bottom: 12px;
@@ -38,6 +40,10 @@ header{
 	margin-left: 3px;
 }
 
+/* End input style */ 
+
+
+/* Generic sections style */
 .pomodoro-tasks{
 	text-align: center;
 }
@@ -46,3 +52,30 @@ header{
 	font-family: 'Rowdies', cursive;
 	font-size: 36px;
 }
+
+/* End generic sections style */
+
+
+/* Pomodoro clock style */
+#clock{
+	display: inline-block;
+	font-family: 'Rowdies', cursive;
+	font-size: 36px;
+	padding: 6px 60px;
+}
+
+.button{
+	border: 1px solid black;
+	font-size: 50px;
+	width: 100px;
+	border-radius: 25px;
+	background-color: white;
+}
+
+.button:hover{
+	cursor: pointer;
+	color: white;
+	background-color: #DC3545;
+	border: 1px solid #DC3545; 
+}
+/* End pomodoro clock style */ 

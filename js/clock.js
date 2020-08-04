@@ -1,8 +1,53 @@
-function clock() {
-	let minutes = document.getElementById('minutes')
-	let seconds = document.getElementById('seconds')
-	console.log(minutes.innerHTML)
-	console.log(seconds.innerHTML)
+let minutes = document.getElementById('minutes')
+let seconds = document.getElementById('seconds')
+
+let totalSeconds = seconds.innerHTML
+
+function clock(){
+
+	let timer = setInterval(function(){
+		if(minutes.innerHTML > 0){
+			if(totalSeconds == 0){
+				totalSeconds = 59
+				minutes.innerHTML--
+				seconds.innerHTML = totalSeconds
+			}
+			else{
+				totalSeconds--
+				if(totalSeconds <= 9) seconds.innerHTML = `0${totalSeconds}`
+				else seconds.innerHTML = totalSeconds	
+			}	
+		}
+		else if(minutes.innerHTML == 0 && totalSeconds == 0){
+			clearInterval(timer)
+		}
+	}, 1000)
 }
 
-clock()
+function timerControl(value){
+
+	if(value == 'm+'){
+		if(minutes.innerHTML < 60){
+			minutes.innerHTML++
+		}
+	}
+	else if(value == 'm-'){
+		if(minutes.innerHTML > 0){
+			minutes.innerHTML--
+		}
+	}
+	else if(value == 's+'){
+		if(seconds.innerHTML < 59){
+			totalSeconds++
+			if(totalSeconds < 10) seconds.innerHTML = `0${totalSeconds}`
+			else seconds.innerHTML = totalSeconds	
+		}
+	}
+	else if(value == 's-'){
+		if(seconds.innerHTML > 0){
+			totalSeconds--
+			if(totalSeconds < 10) seconds.innerHTML = `0${totalSeconds}`
+			else seconds.innerHTML = totalSeconds
+		}
+	}
+}

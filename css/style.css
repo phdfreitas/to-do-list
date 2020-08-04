@@ -78,4 +78,23 @@ header{
 	background-color: #DC3545;
 	border: 1px solid #DC3545; 
 }
+
+#minutes-arrows .click:hover,
+#seconds-arrows .click:hover{
+	cursor: pointer;
+	background-color: #DC3545;
+	border: 1px solid #DC3545;
+	color: white; 
+}
+
+#minutes-arrows button,
+#seconds-arrows button{
+	padding: 0;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+
+
 /* End pomodoro clock style */ 

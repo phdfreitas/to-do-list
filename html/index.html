@@ -41,8 +41,15 @@
 				<hr>
 
 				<div id="clock">
-					<span class="material-icons">keyboard_arrow_up</span>
-					<span class="material-icons">keyboard_arrow_down</span>
+					<div id="minutes-arrows">
+						<button class="material-icons click" id="arrow-up-m" onclick="timerControl('m+')">
+							keyboard_arrow_up
+						</button>
+
+						<button class="material-icons click" id="arrow-down-m" onclick="timerControl('m-')">
+							keyboard_arrow_down
+						</button>
+					</div>
 					<span id="minutes">
 						25
 					</span>
@@ -53,12 +60,20 @@
 						00
 					</span>
 					
-					<span class="material-icons">keyboard_arrow_up</span>
-					<span class="material-icons">keyboard_arrow_down</span>
+					<div id="seconds-arrows">
+						<button class="material-icons click" id="arrow-up-s" onclick="timerControl('s+')">
+							keyboard_arrow_up
+						</button>
+						
+						<button class="material-icons click" id="arrow-down-s" onclick="timerControl('s-')">
+							keyboard_arrow_down
+						</button>
+
+					</div>
 				</div>
 
 				<div>
-					<span class="material-icons button">
+					<span class="material-icons button" onclick="clock()">
 						play_arrow
 					</span>
 	 

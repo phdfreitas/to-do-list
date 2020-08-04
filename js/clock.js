@@ -2,11 +2,11 @@ let minutes = document.getElementById('minutes')
 let seconds = document.getElementById('seconds')
 
 let totalSeconds = seconds.innerHTML
+let timer
 
-function clock(){
-
-	let timer = setInterval(function(){
-		if(minutes.innerHTML > 0){
+function clockStart(){
+	timer = setInterval(function(){
+		if(minutes.innerHTML > 0 || seconds.innerHTML > 0){
 			if(totalSeconds == 0){
 				totalSeconds = 59
 				minutes.innerHTML--
@@ -18,10 +18,11 @@ function clock(){
 				else seconds.innerHTML = totalSeconds	
 			}	
 		}
-		else if(minutes.innerHTML == 0 && totalSeconds == 0){
-			clearInterval(timer)
-		}
 	}, 1000)
+}
+
+function clockStop(){
+	clearInterval(timer)
 }
 
 function timerControl(value){

@@ -1,9 +1,18 @@
+html, body{
+	background-image: linear-gradient(to bottom, white, #DC3545);
+	height: 100%;
+}
+
 header{
 	background-color: #DC3545;
 	font-family: 'Raleway', sans-serif;
 	color: white;
 	text-align: center;
 	margin: 0;
+}
+
+header h2{
+	padding-bottom: 20px;
 }
 
 /* Input style */
@@ -65,25 +74,21 @@ header{
 }
 
 .button{
-	border: 1px solid black;
+	border: none;
 	font-size: 50px;
 	width: 100px;
 	border-radius: 25px;
-	background-color: white;
+	background: none;
 }
 
 .button:hover{
 	cursor: pointer;
-	color: white;
-	background-color: #DC3545;
-	border: 1px solid #DC3545; 
+	color: white; 
 }
 
 #minutes-arrows .click:hover,
 #seconds-arrows .click:hover{
 	cursor: pointer;
-	background-color: #DC3545;
-	border: 1px solid #DC3545;
 	color: white; 
 }
 

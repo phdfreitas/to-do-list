@@ -1,5 +1,4 @@
 html, body{
-	background-image: linear-gradient(to bottom, white, #DC3545);
 	height: 100%;
 }
 
@@ -30,7 +29,7 @@ header h2{
 	margin-bottom: 16px;
 }
 
-.new-task form{
+.new-task div{
 	width: 400px;
 	margin: 0 auto;
 }

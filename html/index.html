@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
-<body>
+<body onload="loadTasks()">
 
 	<header>
 		<h1>To do List</h1>
@@ -29,10 +29,10 @@
 
 		<div class="row new-task">
 			<h4>New Task</h4>
-			<div class="form-inline">
+			<form class="form-inline">
 				<input type="text" id="task" name="task" class="form-control new-task-input" placeholder="Add a new task">
 				<button class="btn btn-danger new-task-btn" onclick="addNewTask()">Add</button>
-			</div>
+			</form>
 		</div>
 		
 		<div class="row pomodoro-tasks">
@@ -84,10 +84,21 @@
 			</div>
 
 			<div class="col-sm-6">
-				<h4>All Tasks</h4>
-				<hr>
 				<div id="tasks">
-					
+					<table class="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Task</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+
+						<tbody id="all_tasks">
+							
+						</tbody>
+
+					</table>
 				</div>
 			</div>
 		</div>

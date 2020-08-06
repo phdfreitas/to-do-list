@@ -98,7 +98,16 @@ header h2{
 	background: none;
 	outline: none;
 }
-
-
-
 /* End pomodoro clock style */ 
+
+
+/* Task List Style */
+table thead{
+	font-family: 'Rowdies', cursive;
+}
+
+table tbody{
+	font-family: 'Exo 2', sans-serif;
+	font-size: 20px;
+}
+/* End Task List Style */

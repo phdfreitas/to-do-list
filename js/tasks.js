@@ -27,7 +27,7 @@ class Db{
 		for (let i = 1; i <= taskId; i++) {
 			let task = localStorage.getItem(i)
 			
-			if(task !== null) tasks.push(task)
+			if(task !== null && task !== undefined && task !== '') tasks.push(task)
 		}
 
 		return tasks
@@ -39,7 +39,11 @@ let db = new Db()
 function addNewTask(){
 	
 	let task = document.getElementById('task')
-	db.newTask(task.value)
+
+	console.log(task.value)
+	if(task.value !== undefined && this.value !== null && this.value !== ''){
+		db.newTask(task.value)
+	}
 }
 
 function loadTasks(){

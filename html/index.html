@@ -37,7 +37,7 @@
 		</div>
 		
 		<div class="row pomodoro-tasks">
-			<div class="col-sm-6" style="border-right: 1px solid black;">
+			<div class="col-xl-4" style="border-right: 1px solid black;">
 				<h4>Working Session</h4>
 				<hr>
 
@@ -74,17 +74,17 @@
 				</div>
 
 				<div>
-					<span class="material-icons button" onclick="clockStart()">
+					<span class="material-icons button" onclick="clockStart('work')">
 						play_arrow
 					</span>
 	 
-					<span class="material-icons button" onclick="clockStop()">
+					<span class="material-icons button" onclick="clockStop('work')">
 						pause
 					</span>
 				</div>
 			</div>
 
-			<div class="col-sm-6">
+			<div class="col-xl-4">
 				<div id="tasks">
 					<table class="table">
 						<thead>
@@ -99,6 +99,53 @@
 							
 						</tbody>
 					</table>
+				</div>
+			</div>
+
+			<div class="col-xl-4" style="border-left: 1px solid black;">
+				<h4>Break Session</h4>
+				<hr>
+
+				<div id="clock">
+					<div id="minutes-arrows">
+						<button class="material-icons click" id="arrow-up-m" onclick="timerControl('mb+')">
+							keyboard_arrow_up
+						</button>
+
+						<button class="material-icons click" id="arrow-down-m" onclick="timerControl('mb-')">
+							keyboard_arrow_down
+						</button>
+					</div>
+					<span id="minutes-b">
+						25
+					</span>
+					
+					<span>:</span>
+					
+					<span id="seconds-b">
+						00
+					</span>
+					
+					<div id="seconds-arrows">
+						<button class="material-icons click" id="arrow-up-s" onclick="timerControl('sb+')">
+							keyboard_arrow_up
+						</button>
+						
+						<button class="material-icons click" id="arrow-down-s" onclick="timerControl('sb-')">
+							keyboard_arrow_down
+						</button>
+
+					</div>
+				</div>
+
+				<div>
+					<span class="material-icons button" onclick="clockStart('break')">
+						play_arrow
+					</span>
+	 
+					<span class="material-icons button" onclick="clockStop('break')">
+						pause
+					</span>
 				</div>
 			</div>
 		</div>

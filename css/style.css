@@ -82,13 +82,11 @@ header h2{
 
 .button:hover{
 	cursor: pointer;
-	color: white; 
 }
 
 #minutes-arrows .click:hover,
 #seconds-arrows .click:hover{
-	cursor: pointer;
-	color: white; 
+	cursor: pointer; 
 }
 
 #minutes-arrows button,

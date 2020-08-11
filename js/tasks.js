@@ -58,12 +58,25 @@ function loadTasks(){
 
 	tasks.forEach( (t, index) => {
 		let row = taskList.insertRow()
+		row.style.backgroundColor = 'rgba(220, 53, 69, 0.7)'
+
 		let input = document.createElement('input')
 		input.setAttribute('type', 'checkbox')
 
 		row.insertCell(0).innerHTML = index + 1
 		row.insertCell(1).innerHTML = t.slice(0, t.length - 1)
 		row.insertCell(2).appendChild(input)
+
+		input.onclick = function(){
+			if(input.checked){
+				row.style.textDecoration = 'line-through'
+				row.style.backgroundColor = '#00FF7F'
+			}
+			else{
+				row.style.textDecoration = 'blink'	
+				row.style.backgroundColor = 'rgba(220, 53, 69, 0.7)'
+			}
+		}
 
 		let btn = document.createElement('span')
 		btn.innerHTML = 'clear'

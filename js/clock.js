@@ -10,8 +10,11 @@ let totalSecondsB = secondsB.innerHTML
 let timer
 let timerB
 
+var audio = new Audio('../audio/bensound-punky.mp3')
+
 function clockStart(value){
 	if(value == 'work'){
+		if(audio.play()) audio.pause()
 		timer = setInterval(function(){
 			if(minutes.innerHTML > 0 || seconds.innerHTML > 0){
 				if(totalSeconds == 0){
@@ -25,9 +28,15 @@ function clockStart(value){
 					else seconds.innerHTML = totalSeconds	
 				}	
 			}
+			else{
+				clearInterval(timer)
+				audio.currentTime = 0
+				audio.play()
+			}
 		}, 1000)
 	}
 	else{
+		if(audio.play()) audio.pause()
 		timerB = setInterval(function(){
 			if(minutesB.innerHTML > 0 || secondsB.innerHTML > 0){
 				if(totalSecondsB == 0){
@@ -41,6 +50,11 @@ function clockStart(value){
 					else secondsB.innerHTML = totalSecondsB
 				}	
 			}
+			else{
+				clearInterval(timerB)
+				audio.currentTime = 0
+				audio.play()
+			}
 		}, 1000)	
 	}
 }
@@ -48,9 +62,15 @@ function clockStart(value){
 function clockStop(value){
 	if(value == 'work'){
 		clearInterval(timer)
+		if(audio.play()){
+			audio.pause()
+		}
 	}
 	else{
 		clearInterval(timerB)
+		if(audio.play()){
+			audio.pause()
+		}
 	}
 }
 
